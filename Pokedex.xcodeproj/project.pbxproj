@@ -14,6 +14,7 @@
 		5C5F30021C487E0D001EEA73 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C5F30001C487E0D001EEA73 /* LaunchScreen.storyboard */; };
 		5C5F300D1C487E0E001EEA73 /* PokedexTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5F300C1C487E0E001EEA73 /* PokedexTests.swift */; };
 		5C5F30181C487E0E001EEA73 /* PokedexUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5F30171C487E0E001EEA73 /* PokedexUITests.swift */; };
+		5C5F30261C488923001EEA73 /* English_Pokémon_logo.svg.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C5F30251C488923001EEA73 /* English_Pokémon_logo.svg.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		5C5F30131C487E0E001EEA73 /* PokedexUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PokedexUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C5F30171C487E0E001EEA73 /* PokedexUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokedexUITests.swift; sourceTree = "<group>"; };
 		5C5F30191C487E0E001EEA73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C5F30251C488923001EEA73 /* English_Pokémon_logo.svg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "English_Pokémon_logo.svg.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 				5C5F2FF91C487E0D001EEA73 /* ViewController.swift */,
 				5C5F2FFB1C487E0D001EEA73 /* Main.storyboard */,
 				5C5F2FFE1C487E0D001EEA73 /* Assets.xcassets */,
+				5C5F30251C488923001EEA73 /* English_Pokémon_logo.svg.png */,
 				5C5F30001C487E0D001EEA73 /* LaunchScreen.storyboard */,
 				5C5F30031C487E0D001EEA73 /* Info.plist */,
 			);
@@ -230,6 +233,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C5F30021C487E0D001EEA73 /* LaunchScreen.storyboard in Resources */,
+				5C5F30261C488923001EEA73 /* English_Pokémon_logo.svg.png in Resources */,
 				5C5F2FFF1C487E0D001EEA73 /* Assets.xcassets in Resources */,
 				5C5F2FFD1C487E0D001EEA73 /* Main.storyboard in Resources */,
 			);
