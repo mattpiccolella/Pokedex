@@ -13,25 +13,42 @@ class PokedexViewController: UIViewController {
   @IBOutlet var collectionView: UICollectionView!
   
     override func viewDidLoad() {
-        super.viewDidLoad()
+      super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+      collectionView.backgroundColor = UIColor.lightGrayColor()
+      collectionView.delegate = self
+      collectionView.dataSource = self
+      
+      self.automaticallyAdjustsScrollViewInsets = false
+
+      self.navigationItem.title = "My Pokedex"
     }
 
     override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+      super.didReceiveMemoryWarning()
     }
-    
 
-    /*
-    // MARK: - Navigation
+}
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+extension PokedexViewController: UICollectionViewDelegateFlowLayout {
+  func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+    return CGSizeMake(self.view.frame.width, 40.0)
+  }
+  
+  func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat {
+    return 3.0
+  }
+}
 
+extension PokedexViewController: UICollectionViewDataSource {
+  func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+    let newCell = collectionView.dequeueReusableCellWithReuseIdentifier("PokedexCell", forIndexPath: indexPath) as! PokedexCollectionViewCell
+    newCell.nameLabel.text = "Pikachu"
+    newCell.backgroundColor = UIColor.whiteColor()
+    return newCell
+  }
+  
+  func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    return 20
+  }
 }
