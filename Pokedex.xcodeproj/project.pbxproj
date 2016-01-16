@@ -15,6 +15,7 @@
 		5C5F300D1C487E0E001EEA73 /* PokedexTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5F300C1C487E0E001EEA73 /* PokedexTests.swift */; };
 		5C5F30181C487E0E001EEA73 /* PokedexUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5F30171C487E0E001EEA73 /* PokedexUITests.swift */; };
 		5C5F30261C488923001EEA73 /* English_Pokémon_logo.svg.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C5F30251C488923001EEA73 /* English_Pokémon_logo.svg.png */; };
+		5C5F30281C49F221001EEA73 /* PokedexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5F30271C49F221001EEA73 /* PokedexViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		5C5F30171C487E0E001EEA73 /* PokedexUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokedexUITests.swift; sourceTree = "<group>"; };
 		5C5F30191C487E0E001EEA73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5C5F30251C488923001EEA73 /* English_Pokémon_logo.svg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "English_Pokémon_logo.svg.png"; sourceTree = "<group>"; };
+		5C5F30271C49F221001EEA73 /* PokedexViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokedexViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				5C5F30251C488923001EEA73 /* English_Pokémon_logo.svg.png */,
 				5C5F30001C487E0D001EEA73 /* LaunchScreen.storyboard */,
 				5C5F30031C487E0D001EEA73 /* Info.plist */,
+				5C5F30271C49F221001EEA73 /* PokedexViewController.swift */,
 			);
 			path = Pokedex;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C5F30281C49F221001EEA73 /* PokedexViewController.swift in Sources */,
 				5C5F2FFA1C487E0D001EEA73 /* ViewController.swift in Sources */,
 				5C5F2FF81C487E0D001EEA73 /* AppDelegate.swift in Sources */,
 			);
