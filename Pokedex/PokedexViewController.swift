@@ -13,22 +13,45 @@ import SwiftyJSON
 class PokedexViewController: UIViewController {
 
   @IBOutlet var collectionView: UICollectionView!
+  var pokemonData: [PokemonModel] = []
   
-    override func viewDidLoad() {
-      super.viewDidLoad()
+  override func viewDidLoad() {
+    super.viewDidLoad()
 
-      collectionView.backgroundColor = UIColor.lightGrayColor()
-      collectionView.delegate = self
-      collectionView.dataSource = self
+    collectionView.backgroundColor = UIColor.lightGrayColor()
+    collectionView.delegate = self
+    collectionView.dataSource = self
       
-      self.automaticallyAdjustsScrollViewInsets = false
+    self.automaticallyAdjustsScrollViewInsets = false
 
-      self.navigationItem.title = "My Pokedex"
-    }
+    self.navigationItem.title = "My Pokedex"
+    
+    fetchData("http://pokeapi.co/api/v1/pokedex/1/", completion: {
+      self.collectionView.reloadData()
+    })
+  }
 
-    override func didReceiveMemoryWarning() {
-      super.didReceiveMemoryWarning()
+  override func didReceiveMemoryWarning() {
+    super.didReceiveMemoryWarning()
+  }
+  
+  func fetchData(url: String, completion: () -> Void) {
+    Alamofire.request(.GET, url, encoding: .JSON).responseData { response in
+      switch response.result {
+      case .Success(_):
+        let responseData: JSON = JSON(data: response.data!)
+        if let pokemon = responseData["pokemon"].array {
+          self.pokemonData = pokemon.map({ (json: JSON) -> PokemonModel in
+            PokemonModel(name: json["name"].string!, resourceURI: json["resource_uri"].string!)
+          })
+        }
+      case .Failure(let error):
+        self.pokemonData = []
+        print(error)
+      }
+      completion()
     }
+  }
 
 }
 
@@ -45,12 +68,13 @@ extension PokedexViewController: UICollectionViewDelegateFlowLayout {
 extension PokedexViewController: UICollectionViewDataSource {
   func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
     let newCell = collectionView.dequeueReusableCellWithReuseIdentifier("PokedexCell", forIndexPath: indexPath) as! PokedexCollectionViewCell
-    newCell.nameLabel.text = "Pikachu"
+    let pokemonModel = pokemonData[indexPath.row]
+    newCell.nameLabel.text = pokemonModel.name.capitalizedString
     newCell.backgroundColor = UIColor.whiteColor()
     return newCell
   }
   
   func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    return 20
+    return pokemonData.count
   }
 }
