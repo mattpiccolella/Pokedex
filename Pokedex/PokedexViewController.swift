@@ -95,6 +95,9 @@ extension PokedexViewController: UICollectionViewDelegate {
 
 extension PokedexViewController: UISearchBarDelegate {
   func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
-    // TODO: Filter results.
+    filteredData = pokemonData.filter({ (pokemon: PokemonModel) -> Bool in
+      return pokemon.name.hasPrefix(searchText.lowercaseString) || searchText == ""
+    })
+    collectionView.reloadData()
   }
 }
