@@ -78,3 +78,12 @@ extension PokedexViewController: UICollectionViewDataSource {
     return pokemonData.count
   }
 }
+
+extension PokedexViewController: UICollectionViewDelegate {
+  func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+    let detailController: PokemonDetailViewController = storyboard.instantiateViewControllerWithIdentifier("PokemonDetail") as! PokemonDetailViewController
+    detailController.resourceURI = pokemonData[indexPath.row].resourceURI
+    self.navigationController?.pushViewController(detailController, animated: true)
+  }
+}
