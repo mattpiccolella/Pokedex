@@ -112,6 +112,98 @@
             </objects>
             <point key="canvasLocation" x="1033" y="990"/>
         </scene>
+        <!--Pokemon Detail View Controller-->
+        <scene sceneID="dTW-gX-tD1">
+            <objects>
+                <viewController id="a9V-UD-A1A" customClass="PokemonDetailViewController" customModule="Pokedex" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="P9c-Az-9Ee"/>
+                        <viewControllerLayoutGuide type="bottom" id="D8M-f0-6so"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lAZ-Hp-71t">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8fA-aE-O0A">
+                                <rect key="frame" x="225" y="40" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="1zC-zc-FeL"/>
+                                    <constraint firstAttribute="width" constant="150" id="Omq-U0-24v"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ADX-9a-qSC">
+                                <rect key="frame" x="279" y="200" width="42" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AFd-MH-OOg">
+                                <rect key="frame" x="20" y="240.5" width="42" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OcJ-0g-mas">
+                                <rect key="frame" x="20" y="271" width="42" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="mGe-IA-r2n">
+                                <rect key="frame" x="0.0" y="311.5" width="600" height="268.5"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Af7-75-8Ha">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="ylc-bH-7hK">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8fA-aE-O0A" firstAttribute="centerX" secondItem="lAZ-Hp-71t" secondAttribute="centerX" id="MH1-ck-Zmy"/>
+                            <constraint firstItem="OcJ-0g-mas" firstAttribute="leading" secondItem="lAZ-Hp-71t" secondAttribute="leading" constant="20" id="Off-s5-giq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="mGe-IA-r2n" secondAttribute="trailingMargin" id="PQl-Oe-1K2"/>
+                            <constraint firstItem="D8M-f0-6so" firstAttribute="top" secondItem="mGe-IA-r2n" secondAttribute="bottom" constant="20" id="TUr-TY-FIr"/>
+                            <constraint firstItem="8fA-aE-O0A" firstAttribute="top" secondItem="P9c-Az-9Ee" secondAttribute="bottom" constant="20" id="U5r-se-7e9"/>
+                            <constraint firstItem="AFd-MH-OOg" firstAttribute="top" secondItem="ADX-9a-qSC" secondAttribute="bottom" constant="20" id="bNH-kN-o9m"/>
+                            <constraint firstItem="ADX-9a-qSC" firstAttribute="top" secondItem="8fA-aE-O0A" secondAttribute="bottom" constant="10" id="f4J-Ft-oPR"/>
+                            <constraint firstItem="mGe-IA-r2n" firstAttribute="leading" secondItem="lAZ-Hp-71t" secondAttribute="leading" id="ntp-qN-63p"/>
+                            <constraint firstItem="AFd-MH-OOg" firstAttribute="leading" secondItem="lAZ-Hp-71t" secondAttribute="leading" constant="20" id="pka-BO-ko7"/>
+                            <constraint firstItem="mGe-IA-r2n" firstAttribute="top" secondItem="OcJ-0g-mas" secondAttribute="bottom" constant="20" id="r7t-oQ-97g"/>
+                            <constraint firstAttribute="trailing" secondItem="mGe-IA-r2n" secondAttribute="trailing" id="rGt-S3-Qaa"/>
+                            <constraint firstItem="OcJ-0g-mas" firstAttribute="top" secondItem="AFd-MH-OOg" secondAttribute="bottom" constant="10" id="rJQ-Ft-ZGq"/>
+                            <constraint firstItem="ADX-9a-qSC" firstAttribute="centerX" secondItem="lAZ-Hp-71t" secondAttribute="centerX" id="rw4-Z4-WkF"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="PQl-Oe-1K2"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="attackLabel" destination="AFd-MH-OOg" id="YQe-yw-rBe"/>
+                        <outlet property="defenseLabel" destination="OcJ-0g-mas" id="hSr-TP-Y4o"/>
+                        <outlet property="image" destination="8fA-aE-O0A" id="skD-dW-r5n"/>
+                        <outlet property="movesList" destination="mGe-IA-r2n" id="Kco-hN-jaS"/>
+                        <outlet property="nameLabel" destination="ADX-9a-qSC" id="G71-zj-JHa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LUt-pz-S81" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1895" y="909"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="5io-A1-vHf">
             <objects>
